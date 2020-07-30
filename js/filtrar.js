@@ -6,15 +6,14 @@ campoFiltro.addEventListener("input", function() { //o evento de input que é re
     if(this.value.length > 0) {
         for(var i = 0; i < pacientes.length; i++){
             var paciente = pacientes[i];
-
             var tdNome = paciente.querySelector(".info-nome");
             var nome = tdNome.textContent;
-
             var expressao = new RegExp(this.value, "i"); //O modificador "i" é para indicar que estamos buscando por case-insensitive, ou seja tanto "Pa" quanto "pa" achariam a palavra "Paulo", ele não liga para a diferença entre maísuculas e minúsculas.
+            
             if(!expressao.test(nome)) {
-                paciente.classList.remove("invisivel");
-            } else {
                 paciente.classList.add("invisivel");
+            } else {
+                paciente.classList.remove("invisivel");
             }
         }
     } else {

@@ -15,7 +15,7 @@ header{
 }
 
 .h1{
-	font-size: ;
+	font-size: auto;
 	display:inline-block;
 	vertical-align:	middle;
 	font-family: "Times New Roman", Times, serif;
