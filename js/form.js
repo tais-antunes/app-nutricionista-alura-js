@@ -33,11 +33,17 @@ function obtemDadosForm(form){
         peso: form.peso.value,
         altura: form.altura.value,
         gordura: form.gordura.value,
-        imc: calculaImc(form.peso.value, form.altura.value)
+        imc: calculaImc(form.peso.value, form.altura.value),
+        btn: btnExcluirPaciente(form.btn.value)
     }
 
     return paciente;
     
+}
+
+function btnExcluirPaciente(){
+    var btnExcluir = document.createElement("button");
+    btnExcluir.classList.add(paciente);
 }
 
 function montaTr(paciente){
@@ -49,6 +55,7 @@ function montaTr(paciente){
     pacienteTr.appendChild(montaTd(paciente.altura, "info-altura"));
     pacienteTr.appendChild(montaTd(paciente.gordura, "info-gordura"));
     pacienteTr.appendChild(montaTd(paciente.imc, "info-imc"));
+    pacienteTr.appendChild(montaTd(paciente.btn, "btn-excluir"));
 
     return pacienteTr;
 

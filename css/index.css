@@ -8,17 +8,26 @@ body{
 }
 
 header{
-	background-color: #fa7f72;
+	background-color: #ff2037;
 	height: 3em;
 	color: #FFF;
 	margin-bottom: 1em;
 }
 
+.icons {
+    overflow: hidden;
+    vertical-align: middle;
+	color: black;
+
+}
+
 .h1{
 	font-size: auto;
-	display:inline-block;
+	display: flex;
+    align-items: center;
 	vertical-align:	middle;
 	font-family: "Times New Roman", Times, serif;
+	font-size: 25px !important;
 }
 header h2{
 	font-size: 2em;
@@ -99,17 +108,25 @@ label{
 
 .btn-add-pacientes {
 	color: #fff;
-    background-color: #fa7f72;
+    background-color: #ff2037;
     width: auto;
 	height: 50px;
 	margin-bottom: 20px;
 }
 
-.adicionar-paciente{
+.btn-excluir-paciente {
+	color: #fff;
+    background-color: #ff2037;
+    width: auto;
+	margin: auto;
+    height: auto;
+}
+
+.adicionar-paciente {
     margin-top: 30px;
 }
 
-.campo-invalido{
+.campo-invalido { 
 	border: 1px solid red;
 }
 
@@ -124,8 +141,8 @@ label{
 
 .titulo-lista-pacientes {
 	font-size: 1.75rem;
-    color: #fa7f72;
-    font-family: cursive;
+    color: #ff2037;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #filtrar-tabela {
