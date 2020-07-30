@@ -1,0 +1,154 @@
+*{
+	box-sizing: border-box;
+ }
+
+body{
+	font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+}
+
+header{
+	background-color: #fa7f72;
+	height: 3em;
+	color: #FFF;
+	margin-bottom: 1em;
+}
+
+.h1{
+	font-size: ;
+	display:inline-block;
+	vertical-align:	middle;
+	font-family: "Times New Roman", Times, serif;
+}
+header h2{
+	font-size: 2em;
+	display:inline-block;
+	vertical-align:	middle;
+}
+
+header .container:before{
+	content: '';
+	display:inline-block;
+	height: 100%;
+	vertical-align:	middle;
+}
+
+.container{
+	width: 60%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+section{
+	margin: 2em 0;
+	overflow: hidden;
+}
+
+.h3 {
+	font-size: 3em;
+	display: block;
+	padding-bottom: .2em;
+	margin-top: 50px;
+}
+
+table{
+	width: 100%;
+	margin-bottom : .5em;
+    table-layout: fixed;
+
+}
+
+td, th {
+	padding: .7em;
+	margin: 0;
+	border: 1px solid #ccc;
+	text-align: center;
+}
+
+th{
+	font-weight: bold;
+	background-color: #EEE;
+}
+
+label{
+	color: #555;
+	display: block;
+	margin-bottom: .2em;
+}
+
+.campo{
+	margin: 0;
+	padding-bottom: 1em;
+	width: 100%;
+	border: 1px solid #ccc;
+	padding: .7em;
+	width: 100%;
+}
+
+.campo-medio{
+	display: inline-block;
+	padding-right: .5em;
+}
+
+.grupo{
+	width: 32%;
+	display: inline-block;
+	padding: 10px 0px;
+}
+
+
+.btn-add-pacientes {
+	color: #fff;
+    background-color: #fa7f72;
+    width: auto;
+	height: 50px;
+	margin-bottom: 20px;
+}
+
+.adicionar-paciente{
+    margin-top: 30px;
+}
+
+.campo-invalido{
+	border: 1px solid red;
+}
+
+.paciente-invalido {
+	background-color: lightcoral;
+}
+
+.fadeOut {
+	opacity: 0;
+	transition: 0.5s;
+}
+
+.titulo-lista-pacientes {
+	font-size: 1.75rem;
+    color: #fa7f72;
+    font-family: cursive;
+}
+
+#filtrar-tabela {
+    width: 200px;
+    height: 35px;
+    margin-bottom: 10px;
+}
+
+.invisivel {
+    display: none;
+}
+
+.busca-paciente {
+	font-size: medium;
+	margin-right: 10px;
+	font-weight: 500;
+}
+
+#filtrar-tabela {
+    height: auto;
+}
+
+.div-busca-paciente {
+	display: flex;
+    justify-content: flex-end;
+}
