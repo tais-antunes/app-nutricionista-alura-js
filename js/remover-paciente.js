@@ -1,12 +1,13 @@
-var tabela = document.querySelector("#tabela-pacientes");
+function excluirPaciente () {
+    var tabela = document.querySelector("#tabela-pacientes");
 
-tabela.addEventListener("dblclick", function(event) {//dblclick -> duplo click
-    event.target.parentNode.classList.add("fadeOut");
-    
-    if(event.target.tagName == "TD"){
-        setTimeout(function() {
-            event.target.parentNode.remove();
-        }, 500);
-    }
-})
-    
+    tabela.addEventListener("click", function(event) {//dblclick -> duplo click
+        event.target.parentNode.classList.add();
+        
+        if(event.target.tagName == "BUTTON"){
+            setTimeout(function() {
+                event.target.parentNode.remove();
+            }, 500);
+        }
+    })
+}

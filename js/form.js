@@ -7,7 +7,7 @@ botaoAdd.addEventListener("click", function(event){ // Escutador de eventos
 
     var paciente = obtemDadosForm(form);
 
-    //var pacienteTr = montaTr(paciente);
+    // var pacienteTr = montaTr(paciente);
 
     var erros = validaPaciente(paciente);
 
@@ -16,9 +16,8 @@ botaoAdd.addEventListener("click", function(event){ // Escutador de eventos
         return;
     }
 
+    adicionaPacienteNaTabela(paciente);
 
-    var tabela = document.querySelector("#tabela-pacientes");
-    tabela.appendChild(pacienteTr);
     form.reset();
 
     var mensagensErro = document.querySelector("#mensagens-erros");
@@ -33,18 +32,13 @@ function obtemDadosForm(form){
         peso: form.peso.value,
         altura: form.altura.value,
         gordura: form.gordura.value,
-        imc: calculaImc(form.peso.value, form.altura.value),
-        btn: btnExcluirPaciente(form.btn.value)
+        imc: calculaImc(form.peso.value, form.altura.value)
     }
 
     return paciente;
     
 }
 
-function btnExcluirPaciente(){
-    var btnExcluir = document.createElement("button");
-    btnExcluir.classList.add(paciente);
-}
 
 function montaTr(paciente){
     var pacienteTr = document.createElement("tr"); // cria um elemento passando a tag
@@ -55,7 +49,6 @@ function montaTr(paciente){
     pacienteTr.appendChild(montaTd(paciente.altura, "info-altura"));
     pacienteTr.appendChild(montaTd(paciente.gordura, "info-gordura"));
     pacienteTr.appendChild(montaTd(paciente.imc, "info-imc"));
-    pacienteTr.appendChild(montaTd(paciente.btn, "btn-excluir"));
 
     return pacienteTr;
 

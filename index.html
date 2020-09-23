@@ -29,7 +29,7 @@
 				
 				<div class="div-busca-paciente">
 					<label for="filtrar-tabela" class="busca-paciente">Buscar Paciente </label>
-					<input type="text" name="filtro" id="filtrar-tabela" placeholder="Digite o nome do paciente">
+					<input type="text" name="filtro" class="input-busca-paciente" id="filtrar-tabela" placeholder="Digite o nome do paciente">
 				</div>
 				
 				<table class="table text-center">
@@ -51,7 +51,7 @@
 							<td class="info-gordura">10</td>
 							<td class="info-imc">0</td>
 							<td class="btn-excluir">
-								<button id="adicionar-paciente" class="btn btn-excluir-paciente">Excluir</button>
+								<button class="btn btn-excluir-paciente" id="btn-excluir" onClick="excluirPaciente()">Excluir</button>
 							</td>
 						</tr>
 
@@ -73,7 +73,7 @@
 							<td class="info-gordura">14</td>
 							<td class="info-imc">0</td>
 							<td class="btn-excluir">
-								<button id="adicionar-paciente" class="btn btn-excluir-paciente">Excluir</button>
+								<button id="adicionar-paciente" class="btn btn-excluir-paciente" onclick="excluirPaciente">Excluir</button>
 							</td>
 						</tr>
 
@@ -102,8 +102,10 @@
 				<div>
 					<span id="erro-ajax" class="invisivel">Erro ao buscar os pacientes</span>
 					<button type="button" class="btn btn-add-pacientes" id="buscar-pacientes">Adicionar Pacientes API</button>
-					<button class="btn btn-add-pacientes" onclick="divCadastro('minhaDiv')">
-						Cadastrar Novos Pacientes
+					<div>
+						<button class="btn btn-add-pacientes" onclick="divCadastro('minhaDiv')">Cadastrar Novos Pacientes</button>
+					</div>
+						
 					</button>
 					<div id="minhaDiv" class="collapse">
 						<section class="container">
@@ -126,9 +128,8 @@
 										<label for="gordura">% de Gordura:</label>
 										<input id="gordura" type="text" placeholder="digite a porcentagem de gordura do seu paciente" class="campo campo-medio">
 									</div>
-									<button id="adicionar-paciente" class="btn btn-add-pacientes">Cadastrar</button>
 								</div>
-								
+								<button id="adicionar-paciente" class="btn btn-add-pacientes">Cadastrar</button>
 							</form>
 							<ul id="mensagens-erros"></ul>
 						</section>
